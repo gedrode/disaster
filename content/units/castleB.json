@@ -1,0 +1,56 @@
+{
+	"name": "castleB"
+	"speed": 10
+	"maxRange": 6
+	"lifetime": 60
+	"outlineColor": "2d2f39"
+	"engineColor": "feb380"
+	"engineSize": 1.1
+	"engineLayer": 100
+	"engineOffset": 10
+	"trailColor": "feb380"
+	"rotateSpeed": 2.5
+	"trailLength": 4
+	"missileAccelTime": 15
+	"lowAltitude": true
+	"fogRadius": 2
+	"health": 50
+	"weapons": [{
+		"shootCone": 360
+		"targetGround": true
+		"mirror": false
+		"reload": 1
+		"deathExplosionEffect": "massiveExplosion"
+		"shootOnDeath": true
+		"shake": 1
+		"bullet": {
+			"type": "ExplosionBulletType"
+			"collidesGround": false
+			"splashDamage": 180
+			"splashDamageRadius": 14
+			"hitColor": "feb380"
+			"shootEffect": {
+				"type": "MultiEffect"
+				"effects": [
+					"massiveExplosion"
+					"scatheExplosion"
+					"scatheLight"
+					{
+						"type": "WaveEffect"
+						"lifetime": 0
+						"strokeFrom": 1
+						"sizeTo": 6
+					}
+				]
+			}
+		}
+	}]
+	"abilities": [{
+		"type": "MoveEffectAbility"
+		"effect": "missileTrailSmoke"
+		"rotation": 20
+		"y": -9
+		"color": "f0cc8399"
+		"interval": 7
+	}]
+}
